@@ -1,9 +1,9 @@
-FROM ubuntu:latest
+FROM ubuntu:disco
 
 # Activate i386 architecture and update Ubuntu
 RUN dpkg --add-architecture i386 && \
-    apt-get update && apt-get -y upgrade && \
-    apt-get -y install wget git make libc6:i386 libncurses5:i386 libstdc++6:i386 && \
+    apt-get update && \
+    apt-get -y install --no-install-recommends ca-certificates wget git make libc6:i386 libncurses5:i386 libstdc++6:i386 && \
     rm -rf /var/lib/apt/lists/*
 
 # Download XC32 installer
