@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:18.04
 
 # Activate i386 architecture and update Ubuntu
 #RUN dpkg --add-architecture i386 && \
